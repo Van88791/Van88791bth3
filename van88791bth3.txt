@@ -1,0 +1,100 @@
+//1
+void ten(){
+  print("Vu Viet Van");  
+}
+void main(){
+  ten();
+}
+
+//2
+import 'dart:convert';
+import 'dart:io';
+import 'dart:math';
+void e2(int l, int r){ 
+  assert(l <= r);
+  if(l % 2 == 1){
+    ++l;
+  }
+  if(r % 2 == 1){
+    --r;
+  }
+  for(int i = l; i <= r; i+=2){
+    stdout.write('$i ');
+  }
+}
+
+//3
+import 'dart:math';
+void main()
+{
+List<int> randomList = List.generate(10, (_) => Random().nextInt(100)+1); 
+print(randomList);  
+}
+
+//4
+import 'dart:io';
+import 'dart:math';
+double S(double r){
+  return r * r * 3.1415;
+}
+void dientich(){
+  stdout.write("Enter r: ");
+  double r = double.parse(stdin.readLineSync()!);
+  print("S = ${s(radius)}");
+}
+
+//5
+import 'dart:io';
+import 'dart:math';
+import 'dart:convert';
+double find_squared_angle(double a, double c){
+  return sqrt(c * c - (a * a));
+}
+double find_hypotenuse(double a, double b){
+  return sqrt((a * a) + (b * b));
+}
+void e5_Pytagon(){
+  print("Enter your chosen: ");
+  print("1. Find hypotenuse");
+  print("2. Find squared angle");
+  int chosen = int.parse(stdin.readLineSync()!);
+  assert(chosen == 1 || chosen == 2);
+  if (chosen == 1){
+    print("Enter a, b: ");
+    double a = double.parse(stdin.readLineSync()!);
+    double b = double.parse(stdin.readLineSync()!);
+    print("Hypotenuse = ${find_hypotenuse(a, b)}");
+  }
+  else {
+    print("Enter a, c: ");
+    double a = double.parse(stdin.readLineSync()!);
+    double c = double.parse(stdin.readLineSync()!);
+    print("Squared angle = ${find_squared_angle(a, c)}");
+  }
+}
+
+//6
+import 'dart:io';
+String reverse(String s){
+  final str = s.runes.toList();  
+  return String.fromCharCodes(str.reversed);
+} 
+void e6_reverse(){
+  stdout.write("chuoi can dao: ");
+  String s = stdin.readLineSync()!;
+  print("Reversed string = ${reverse(s)}");
+}
+
+//7
+import 'dart:io';
+void e7(){
+  stdout.write("so: ");
+  double base = double.parse(stdin.readLineSync()!);
+  stdout.write("mu: ");
+  double exponent = double.parse(stdin.readLineSync()!);
+  print("$so ^ $mu = ${pow(so,mu)}");
+}
+
+
+
+
